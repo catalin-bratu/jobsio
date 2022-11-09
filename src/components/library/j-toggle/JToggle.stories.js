@@ -22,13 +22,15 @@ const Template = (args) => ({
 export const Primary = Template.bind({});
 Primary.args = {
   name: "toggle",
-  label: "Toggle",
+  leftLabel: "Left",
+  rightLabel: "Right",
   primary: true,
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
   name: "toggle",
-  label: "Toggle",
+  leftLabel: "Left",
+  rightLabel: "Right",
   primary: false,
 };

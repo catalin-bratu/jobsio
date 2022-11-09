@@ -1,5 +1,13 @@
 <template>
   <div :class="classes">
+    <label
+      id="left-label"
+      :for="name"
+      class="j-toggle__label"
+      aria-hidden="true"
+    >
+      {{ leftLabel }}
+    </label>
     <div class="j-toggle__button">
       <input
         :id="name"
@@ -7,7 +15,7 @@
         type="checkbox"
         :name="name"
         class="j-toggle__checkbox"
-        aria-labelledby="wrapper label"
+        aria-labelledby="wrapper left-label right-label"
       />
       <label
         id="wrapper"
@@ -16,7 +24,9 @@
         class="j-toggle__wrapper"
       />
     </div>
-    <label id="label" :for="name" class="j-toggle__label">{{ label }}</label>
+    <label id="right-label" :for="name" class="j-toggle__label">
+      {{ rightLabel }}
+    </label>
   </div>
 </template>
 
@@ -28,7 +38,11 @@ const props = defineProps({
     type: String,
     required: true,
   },
-  label: {
+  leftLabel: {
+    type: String,
+    required: true,
+  },
+  rightLabel: {
     type: String,
     required: true,
   },
@@ -66,10 +80,10 @@ const model = computed({
 
 <style scoped>
 .j-toggle {
-  @apply inline-flex items-center;
+  @apply inline-flex items-center gap-2;
 }
 .j-toggle__button {
-  @apply relative mr-2 inline-block;
+  @apply relative inline-block;
 }
 .j-toggle__checkbox {
   @apply absolute block cursor-pointer appearance-none rounded-full checked:right-0;
