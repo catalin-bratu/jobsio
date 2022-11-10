@@ -35,13 +35,6 @@ const props = defineProps({
     type: String,
     default: "",
   },
-  size: {
-    type: String,
-    default: "medium",
-    validator: function (value) {
-      return ["small", "medium", "large"].indexOf(value) !== -1;
-    },
-  },
 });
 
 const emit = defineEmits(["click"]);
@@ -57,7 +50,7 @@ const onClick = () => {
 
 <style scoped>
 .j-card {
-  @apply flex h-40 w-64 cursor-pointer flex-col justify-start truncate rounded bg-white p-4 shadow outline outline-2 outline-transparent hover:outline-blue-600;
+  @apply flex h-36 w-64 cursor-pointer flex-col justify-start truncate rounded bg-white p-4 shadow outline outline-2 outline-transparent hover:outline-blue-600;
 }
 
 .j-card__meta {
