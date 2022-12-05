@@ -50,7 +50,7 @@ const onClick = () => {
 
 <style scoped>
 .j-card {
-  @apply flex h-36 w-64 cursor-pointer flex-col justify-start truncate rounded bg-white p-4 shadow outline outline-2 outline-transparent hover:outline-blue-600;
+  @apply flex h-36 w-64 cursor-pointer flex-col justify-start truncate rounded bg-white p-4 shadow outline outline-1 outline-transparent hover:outline-blue-600;
 }
 
 .j-card__meta {
